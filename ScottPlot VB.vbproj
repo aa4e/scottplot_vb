@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65332788-4F56-4C83-9D45-3ADFB4812F19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>aave</RootNamespace>
+    <AssemblyName>ScottPlot_VB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Empty</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\ScottPlot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Structures\AxisLimits.vb" />
+    <Compile Include="Control\Configuration.vb" />
+    <Compile Include="Control\ControlBackEnd.vb" />
+    <Compile Include="Control\DisplayScale.vb" />
+    <Compile Include="Control\EventProcess\EventsProcessor.vb" />
+    <Compile Include="Control\EventProcess\Events\ApplyZoomRectangleEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\BenchmarkToggleEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\MouseAxisAutoEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\MouseMovedToZoomRectangle.vb" />
+    <Compile Include="Control\EventProcess\Events\MousePanEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\MouseScrollEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\MouseUpClearRenderEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\MouseZoomEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\PlottableDragEvent.vb" />
+    <Compile Include="Control\EventProcess\Events\RenderDelayedHighQuality.vb" />
+    <Compile Include="Control\EventProcess\Events\RenderHighQuality.vb" />
+    <Compile Include="Control\EventProcess\Events\RenderLowQuality.vb" />
+    <Compile Include="Control\EventProcess\IUIEvent.vb" />
+    <Compile Include="Control\EventProcess\UIEventFactory.vb" />
+    <Compile Include="Control\InputState.vb" />
+    <Compile Include="Control\IPlotControl.vb" />
+    <Compile Include="Control\LinkedPlotControl.vb" />
+    <Compile Include="Control\QualityConfiguration.vb" />
+    <Compile Include="Control\QualityMode.vb" />
+    <Compile Include="Structures\Coordinate.vb" />
+    <Compile Include="Plottable\DataStructures\CoordinateRect.vb" />
+    <Compile Include="Structures\CoordinateVector.vb" />
+    <Compile Include="Helpers\DataGen.vb" />
+    <Compile Include="Numeric\DoubleExtensions.vb" />
+    <Compile Include="Drawing\Colormap.vb" />
+    <Compile Include="Drawing\ColormapFactory.vb" />
+    <Compile Include="Drawing\Colormaps\Algae.vb" />
+    <Compile Include="Drawing\Colormaps\Amp.vb" />
+    <Compile Include="Drawing\Colormaps\Balance.vb" />
+    <Compile Include="Drawing\Colormaps\Blues.vb" />
+    <Compile Include="Drawing\Colormaps\Curl.vb" />
+    <Compile Include="Drawing\Colormaps\Deep.vb" />
+    <Compile Include="Drawing\Colormaps\Delta.vb" />
+    <Compile Include="Drawing\Colormaps\Dense.vb" />
+    <Compile Include="Drawing\Colormaps\Diff.vb" />
+    <Compile Include="Drawing\Colormaps\Grayscale.vb" />
+    <Compile Include="Drawing\Colormaps\GrayscaleR.vb" />
+    <Compile Include="Drawing\Colormaps\Greens.vb" />
+    <Compile Include="Drawing\Colormaps\Haline.vb" />
+    <Compile Include="Drawing\Colormaps\Ice.vb" />
+    <Compile Include="Drawing\Colormaps\Inferno.vb" />
+    <Compile Include="Drawing\Colormaps\Jet.vb" />
+    <Compile Include="Drawing\Colormaps\Magma.vb" />
+    <Compile Include="Drawing\Colormaps\Matter.vb" />
+    <Compile Include="Drawing\Colormaps\Oxy.vb" />
+    <Compile Include="Drawing\Colormaps\Phase.vb" />
+    <Compile Include="Drawing\Colormaps\Plasma.vb" />
+    <Compile Include="Drawing\Colormaps\Rain.vb" />
+    <Compile Include="Drawing\Colormaps\Solar.vb" />
+    <Compile Include="Drawing\Colormaps\Speed.vb" />
+    <Compile Include="Drawing\Colormaps\Tarn.vb" />
+    <Compile Include="Drawing\Colormaps\Tempo.vb" />
+    <Compile Include="Drawing\Colormaps\Thermal.vb" />
+    <Compile Include="Drawing\Colormaps\Topo.vb" />
+    <Compile Include="Drawing\Colormaps\Turbid.vb" />
+    <Compile Include="Drawing\Colormaps\Turbo.vb" />
+    <Compile Include="Drawing\Colormaps\Viridis.vb" />
+    <Compile Include="Drawing\Font.vb" />
+    <Compile Include="Drawing\GDI.vb" />
+    <Compile Include="Drawing\HatchStyle.vb" />
+    <Compile Include="Drawing\IColormap.vb" />
+    <Compile Include="Drawing\InstalledFont.vb" />
+    <Compile Include="Drawing\PaletteObsolete.vb" />
+    <Compile Include="Drawing\Tools.vb" />
+    <Compile Include="Enums\Alignment.vb" />
+    <Compile Include="Enums\ArrowAnchor.vb" />
+    <Compile Include="Enums\Cursor.vb" />
+    <Compile Include="Enums\EqualScaleMode.vb" />
+    <Compile Include="Enums\FillType.vb" />
+    <Compile Include="Enums\HorizontalAlignment.vb" />
+    <Compile Include="Enums\ImagePlacement.vb" />
+    <Compile Include="Enums\IntensityMode.vb" />
+    <Compile Include="Enums\LineStyle.vb" />
+    <Compile Include="Enums\Orientation.vb" />
+    <Compile Include="Enums\RadarAxis.vb" />
+    <Compile Include="Enums\RadialGaugeMode.vb" />
+    <Compile Include="Enums\RenderType.vb" />
+    <Compile Include="Enums\VerticalAlignment.vb" />
+    <Compile Include="Structures\HatchOptions.vb" />
+    <Compile Include="Palette\IPalette.vb" />
+    <Compile Include="Marker\MarkerShapes\Asterisk.vb" />
+    <Compile Include="Marker\MarkerShapes\Cross.vb" />
+    <Compile Include="Marker\MarkerShapes\Eks.vb" />
+    <Compile Include="Marker\MarkerShapes\FilledCircle.vb" />
+    <Compile Include="Marker\MarkerShapes\FilledDiamond.vb" />
+    <Compile Include="Marker\MarkerShapes\FilledSquare.vb" />
+    <Compile Include="Marker\MarkerShapes\FilledTriangleDown.vb" />
+    <Compile Include="Marker\MarkerShapes\FilledTriangleUp.vb" />
+    <Compile Include="Marker\MarkerShapes\Hashtag.vb" />
+    <Compile Include="Marker\MarkerShapes\HorizontalBar.vb" />
+    <Compile Include="Marker\MarkerShapes\None.vb" />
+    <Compile Include="Marker\MarkerShapes\OpenCircle.vb" />
+    <Compile Include="Marker\MarkerShapes\OpenDiamond.vb" />
+    <Compile Include="Marker\MarkerShapes\OpenSquare.vb" />
+    <Compile Include="Marker\MarkerShapes\OpenTriangleDown.vb" />
+    <Compile Include="Marker\MarkerShapes\OpenTriangleUp.vb" />
+    <Compile Include="Marker\MarkerShapes\TriStarDown.vb" />
+    <Compile Include="Marker\MarkerShapes\TriStarUp.vb" />
+    <Compile Include="Marker\MarkerShapes\VerticalBar.vb" />
+    <Compile Include="Marker\IMarker.vb" />
+    <Compile Include="Marker\Marker.vb" />
+    <Compile Include="Enums\MarkerShape.vb" />
+    <Compile Include="Marker\MarkerTools.vb" />
+    <Compile Include="Structures\MultiPlot.vb" />
+    <Compile Include="Numeric\NumericConversion.vb" />
+    <Compile Include="Palette\Palette.vb" />
+    <Compile Include="Palette\Palettes\Amber.vb" />
+    <Compile Include="Palette\Palettes\Aurora.vb" />
+    <Compile Include="Palette\Palettes\Building.vb" />
+    <Compile Include="Palette\Palettes\Category10.vb" />
+    <Compile Include="Palette\Palettes\Category20.vb" />
+    <Compile Include="Palette\Palettes\ColorblindFriendly.vb" />
+    <Compile Include="Palette\Palettes\Custom.vb" />
+    <Compile Include="Palette\Palettes\Dark.vb" />
+    <Compile Include="Palette\Palettes\DarkPastel.vb" />
+    <Compile Include="Palette\Palettes\Frost.vb" />
+    <Compile Include="Palette\HexPaletteBase.vb" />
+    <Compile Include="Palette\Palettes\LightSpectrum.vb" />
+    <Compile Include="Palette\Palettes\Microcharts.vb" />
+    <Compile Include="Palette\Palettes\LightOcean.vb" />
+    <Compile Include="Palette\Palettes\Nero.vb" />
+    <Compile Include="Palette\Palettes\Nord.vb" />
+    <Compile Include="Palette\Palettes\Normal.vb" />
+    <Compile Include="Palette\Palettes\OneHalf.vb" />
+    <Compile Include="Palette\Palettes\PastelWheel.vb" />
+    <Compile Include="Palette\Palettes\OneHalfDark.vb" />
+    <Compile Include="Palette\PaletteBase.vb" />
+    <Compile Include="Palette\Palettes\Penumbra.vb" />
+    <Compile Include="Palette\Palettes\PolarNight.vb" />
+    <Compile Include="Palette\Palettes\Redness.vb" />
+    <Compile Include="Palette\Palettes\SnowStorm.vb" />
+    <Compile Include="Palette\Palettes\SummerSplash.vb" />
+    <Compile Include="Palette\Palettes\Tsitsulin.vb" />
+    <Compile Include="Structures\Pixel.vb" />
+    <Compile Include="Structures\PixelPadding.vb" />
+    <Compile Include="Structures\PixelRect.vb" />
+    <Compile Include="Plottable\DataStructures\PlotDimensions.vb" />
+    <Compile Include="Plottable\Annotation.vb" />
+    <Compile Include="Plottable\ArrowCoordinated.vb" />
+    <Compile Include="Plottable\Axis\AxisLine.vb" />
+    <Compile Include="Plottable\Axis\AxisLineVector.vb" />
+    <Compile Include="Plottable\Axis\AxisSpan.vb" />
+    <Compile Include="Plottable\Bar.vb" />
+    <Compile Include="Plottable\BarPlot.vb" />
+    <Compile Include="Plottable\BarPlotBase.vb" />
+    <Compile Include="Plottable\BarSeries.vb" />
+    <Compile Include="Plottable\Bracket.vb" />
+    <Compile Include="Plottable\BubblePlot.vb" />
+    <Compile Include="Plottable\ClevelandDotPlot.vb" />
+    <Compile Include="Plottable\Colorbar.vb" />
+    <Compile Include="Plottable\CoordinatedHeatmap.vb" />
+    <Compile Include="Plottable\CoxcombPlot.vb" />
+    <Compile Include="Plottable\Crosshair.vb" />
+    <Compile Include="Plottable\DataStructures\DataSet.vb" />
+    <Compile Include="Plottable\DataStructures\OHLC.vb" />
+    <Compile Include="Plottable\DataStructures\SegmentedTree.vb" />
+    <Compile Include="Plottable\DraggableMarkerPlot.vb" />
+    <Compile Include="Plottable\ErrorBar.vb" />
+    <Compile Include="Plottable\FinancePlot.vb" />
+    <Compile Include="Plottable\FunctionPlot.vb" />
+    <Compile Include="Plottable\Heatmap.vb" />
+    <Compile Include="Plottable\Axis\HLine.vb" />
+    <Compile Include="Plottable\Axis\HSpan.vb" />
+    <Compile Include="Plottable\Ifaces\IDraggable.vb" />
+    <Compile Include="Plottable\Ifaces\IHasArea.vb" />
+    <Compile Include="Plottable\Ifaces\IHasColor.vb" />
+    <Compile Include="Plottable\Ifaces\IHasColormap.vb" />
+    <Compile Include="Plottable\Ifaces\IHasHighlightablePoints.vb" />
+    <Compile Include="Plottable\Ifaces\IHasLine.vb" />
+    <Compile Include="Plottable\Ifaces\IHasMarker.vb" />
+    <Compile Include="Plottable\Ifaces\IHasPixelOffset.vb" />
+    <Compile Include="Plottable\Ifaces\IHasPoints.vb" />
+    <Compile Include="Plottable\Ifaces\IHighlightable.vb" />
+    <Compile Include="Plottable\Ifaces\IHittable.vb" />
+    <Compile Include="Plottable\Ifaces\IPlottable.vb" />
+    <Compile Include="Plottable\Ifaces\IStylable.vb" />
+    <Compile Include="Plottable\Image.vb" />
+    <Compile Include="Plottable\LegendItem.vb" />
+    <Compile Include="Plottable\LollipopPlot.vb" />
+    <Compile Include="Plottable\MarkerPlot.vb" />
+    <Compile Include="Plottable\MinMaxSearchStrategies\IMinMaxSearchStrategy.vb" />
+    <Compile Include="Plottable\MinMaxSearchStrategies\LinearDoubleOnlyMinMaxStrategy.vb" />
+    <Compile Include="Plottable\MinMaxSearchStrategies\LinearFastDoubleMinMaxSearchStrategy.vb" />
+    <Compile Include="Plottable\MinMaxSearchStrategies\LinearMinMaxSearchStrategy.vb" />
+    <Compile Include="Plottable\MinMaxSearchStrategies\SegmentedTreeMinMaxSearchStrategy.vb" />
+    <Compile Include="Plottable\PiePlot.vb" />
+    <Compile Include="Plottable\Polygon.vb" />
+    <Compile Include="Plottable\Polygons.vb" />
+    <Compile Include="Plottable\PopulationPlot.vb" />
+    <Compile Include="Plottable\RadarPlot.vb" />
+    <Compile Include="Plottable\RadialGauge.vb" />
+    <Compile Include="Plottable\RadialGaugePlot.vb" />
+    <Compile Include="Plottable\Axis\RepeatingAxisLine.vb" />
+    <Compile Include="Plottable\ScaleBar.vb" />
+    <Compile Include="Plottable\Scatter plot\ScatterPlot.vb" />
+    <Compile Include="Plottable\Scatter plot\ScatterPlotDraggable.vb" />
+    <Compile Include="Plottable\Scatter plot\ScatterPlotHighlight.vb" />
+    <Compile Include="Plottable\Scatter plot\ScatterPlotList.vb" />
+    <Compile Include="Plottable\Scatter plot\ScatterPlotListDraggable.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlot.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotBase.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotConst.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotGeneric.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotXY.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotXYConst.vb" />
+    <Compile Include="Plottable\Signal plot\SignalPlotXYGeneric.vb" />
+    <Compile Include="Plottable\Text.vb" />
+    <Compile Include="Plottable\Tooltip.vb" />
+    <Compile Include="Plottable\VectorField.vb" />
+    <Compile Include="Plottable\VectorFieldList.vb" />
+    <Compile Include="Plottable\Axis\VLine.vb" />
+    <Compile Include="Plottable\Axis\VSpan.vb" />
+    <Compile Include="Plot\Plot.Axis.vb" />
+    <Compile Include="Plot\Plot.Obsolete.vb" />
+    <Compile Include="Plot\Plot.Render.vb" />
+    <Compile Include="Plot\Plot.vb" />
+    <Compile Include="Plot\Plott.Add.vb" />
+    <Compile Include="Renderable\ArrowStyle.vb" />
+    <Compile Include="Renderable\Axis.vb" />
+    <Compile Include="Renderable\AxisDimensions.vb" />
+    <Compile Include="Renderable\AxisLabel.vb" />
+    <Compile Include="Renderable\AxisLine.vb" />
+    <Compile Include="Renderable\AxisTicks.vb" />
+    <Compile Include="Renderable\AxisTicksRender.vb" />
+    <Compile Include="Renderable\DataBackground.vb" />
+    <Compile Include="Renderable\DefaultAxes.vb" />
+    <Compile Include="Renderable\Edge.vb" />
+    <Compile Include="Renderable\FigureBackground.vb" />
+    <Compile Include="Renderable\IRenderable.vb" />
+    <Compile Include="Renderable\Legend.vb" />
+    <Compile Include="Renderable\Message.vb" />
+    <Compile Include="Renderable\ZoomRectangle.vb" />
+    <Compile Include="Helpers\Settings.vb" />
+    <Compile Include="Snapping\1D\Custom1D.vb" />
+    <Compile Include="Snapping\1D\Integer1D.vb" />
+    <Compile Include="Snapping\1D\ISnap1D.vb" />
+    <Compile Include="Snapping\1D\Nearest1D.vb" />
+    <Compile Include="Snapping\1D\NoSnap1D.vb" />
+    <Compile Include="Snapping\2D\Independent2D.vb" />
+    <Compile Include="Snapping\2D\Integer2D.vb" />
+    <Compile Include="Snapping\2D\ISnap2D.vb" />
+    <Compile Include="Snapping\2D\Nearest2D.vb" />
+    <Compile Include="Snapping\2D\NoSnap2D.vb" />
+    <Compile Include="Structures\StarAxis.vb" />
+    <Compile Include="Statistics\BasicStats.vb" />
+    <Compile Include="Statistics\Common.vb" />
+    <Compile Include="Statistics\Finance.vb" />
+    <Compile Include="Statistics\Histogram.vb" />
+    <Compile Include="Statistics\Interpolation\Bezier.vb" />
+    <Compile Include="Statistics\Interpolation\CatmullRom.vb" />
+    <Compile Include="Statistics\Interpolation\Chaikin.vb" />
+    <Compile Include="Statistics\Interpolation\Cubic.vb" />
+    <Compile Include="Statistics\Interpolation\EndSlopeSpline.vb" />
+    <Compile Include="Statistics\Interpolation\Matrix.vb" />
+    <Compile Include="Statistics\Interpolation\MatrixSolver.vb" />
+    <Compile Include="Statistics\Interpolation\NaturalSpline.vb" />
+    <Compile Include="Statistics\Interpolation\PeriodicSpline.vb" />
+    <Compile Include="Statistics\Interpolation\PointD.vb" />
+    <Compile Include="Statistics\Interpolation\SplineInterpolator.vb" />
+    <Compile Include="Statistics\LinearRegressionLine.vb" />
+    <Compile Include="Statistics\Population.vb" />
+    <Compile Include="Statistics\PopulationMultiSeries.vb" />
+    <Compile Include="Statistics\PopulationSeries.vb" />
+    <Compile Include="Numeric\Vector.vb" />
+    <Compile Include="Numeric\Vector2.vb" />
+    <Compile Include="Styles\Black.vb" />
+    <Compile Include="Styles\Blue1.vb" />
+    <Compile Include="Styles\Blue2.vb" />
+    <Compile Include="Styles\Blue3.vb" />
+    <Compile Include="Styles\Burgundy.vb" />
+    <Compile Include="Styles\Control.vb" />
+    <Compile Include="Styles\Default.vb" />
+    <Compile Include="Styles\Earth.vb" />
+    <Compile Include="Styles\Gray1.vb" />
+    <Compile Include="Styles\Gray2.vb" />
+    <Compile Include="Styles\Hazel.vb" />
+    <Compile Include="Styles\IStyle.vb" />
+    <Compile Include="Styles\Light1.vb" />
+    <Compile Include="Styles\Light2.vb" />
+    <Compile Include="Styles\Monospace.vb" />
+    <Compile Include="Styles\Pink.vb" />
+    <Compile Include="Styles\Seaborn.vb" />
+    <Compile Include="Styles\Style.vb" />
+    <Compile Include="Ticks\DateTimeTickUnits\DateTimeTickUnitBase.vb" />
+    <Compile Include="Ticks\DateTimeTickUnits\DateTimeUnitFactory.vb" />
+    <Compile Include="Ticks\DateTimeTickUnits\IDateTimeUnit.vb" />
+    <Compile Include="Ticks\MonthToMinutes\DateTimeTickDay.vb" />
+    <Compile Include="Ticks\MonthToMinutes\DateTimeTickHour.vb" />
+    <Compile Include="Ticks\MonthToMinutes\DateTimeTickMinute.vb" />
+    <Compile Include="Ticks\MonthToMinutes\DateTimeTickMonth.vb" />
+    <Compile Include="Ticks\SecondsAndLess\DateTimeTickCentisecond.vb" />
+    <Compile Include="Ticks\SecondsAndLess\DateTimeTickDecisecond.vb" />
+    <Compile Include="Ticks\SecondsAndLess\DateTimeTickMillisecond.vb" />
+    <Compile Include="Ticks\SecondsAndLess\DateTimeTickSecond.vb" />
+    <Compile Include="Ticks\Years\DateTimeTickHundredYear.vb" />
+    <Compile Include="Ticks\Years\DateTimeTickTenYear.vb" />
+    <Compile Include="Ticks\Years\DateTimeTickThousandYear.vb" />
+    <Compile Include="Ticks\Years\DateTimeTickYear.vb" />
+    <Compile Include="Ticks\DateTimeUnit.vb" />
+    <Compile Include="Ticks\Tick.vb" />
+    <Compile Include="Ticks\TickCollection.vb" />
+    <Compile Include="Helpers\Tools.vb" />
+    <Compile Include="Helpers\Validate.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
