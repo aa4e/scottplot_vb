@@ -1,6 +1,19 @@
 # scottplot_vb
-ScottPlot translated to VB.NET. It requires .NET Framework 4.5 and does not require any additional packages.
+**ScottPlot** library translated to `VB.NET`. 
 
-Original project is https://github.com/scottplot/scottplot.
+## Prerequisites
+
+It requires **.NET Framework 4.5** and does NOT require any additional packages.
+
+## Description 
+
+ScottPlot VB allows easy display large interactive datasets.
+
+<img src='https://github.com/ScottPlot/ScottPlot/raw/main/dev/graphics/cookbook.jpg' />
+
+## Links 
+- [Original project](https://github.com/scottplot/scottplot)
+
+Icon:
 
 <image src="Images\ScottPlot.ico" />
