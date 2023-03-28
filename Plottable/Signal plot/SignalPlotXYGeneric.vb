@@ -142,7 +142,7 @@ Namespace ScottPlot.Plottable
                 End If
 
                 'Calculate point after displayed points
-                NumericConversion.DoubleToGeneric(Of TX)(dims.XMin - OffsetX, x)
+                NumericConversion.DoubleToGeneric(Of TX)(dims.XMax - OffsetX, x)
                 Dim pointAfterIndex As Integer = Array.BinarySearch(Xs, MinRenderIndex, MaxRenderIndex - MinRenderIndex + 1, x)
                 If (pointAfterIndex < 0) Then
                     pointAfterIndex = Not pointAfterIndex
